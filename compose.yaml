@@ -5,3 +5,7 @@ services:
       - 5000:5000
     volumes:
       - .stateserver:/app/.stateserver
+    labels:
+      - "traefik.frontend.rule=Host:${DOMAIN}"
+      - "traefik.frontend.auth.basic=${USER_PASSWORD}"
+      - "traefik.port=8080"
