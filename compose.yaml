@@ -1,0 +1,7 @@
+services:
+  remote-state-server:
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - .stateserver:/app/.stateserver
